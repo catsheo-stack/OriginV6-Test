@@ -94,6 +94,7 @@ function submitLead(){
  const lead={...s.answers,cta:cta()};
  const fd=new FormData();
  fd.append("form-name","origin-property-pathway");
+ fd.append("_subject","New Origin Property Pathway enquiry");
  fd.append("bot-field","");
  fd.append("name",s.answers.name||"");
  fd.append("mobile",s.answers.mobile||"");
@@ -105,11 +106,16 @@ function submitLead(){
  fd.append("otherFinanceDetails",s.answers.otherFinanceDetails||"");
  fd.append("pathway",JSON.stringify(lead,null,2));
 
- fetch("/",{
+ fetch("https://formspree.io/f/mkolnoka",{
   method:"POST",
-  headers:{"Content-Type":"application/x-www-form-urlencoded"},
-  body:new URLSearchParams(fd).toString()
- }).then(()=>location.href="/thank-you.html")
-   .catch(()=>location.href="/thank-you.html")
+  headers:{"Accept":"application/json"},
+  body:fd
+ }).then((res)=>{
+   if(!res.ok) throw new Error("Form submission failed");
+   location.href="thank-you.html";
+ }).catch((err)=>{
+   console.error(err);
+   alert("Sorry, your enquiry could not be submitted. Please try again, or email hello@originpropertyconcierge.com.au.");
+ })
 }
 if(q==="buying"){s.answers.journey="buying";render("buying-found")}else if(q==="selling"){s.answers.journey="selling";render("state-only")}else if(q==="finance"){s.answers.journey="finance";render("finance-need")}else if(q==="conveyancing"){s.answers.journey="conveyancing";render("legal-support")}else render("start");
