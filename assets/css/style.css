@@ -1015,145 +1015,201 @@
 html,body{font-size:15px;background:#fbfaf8}.brand img{width:138px;height:auto;object-fit:contain}.site-header{padding:28px clamp(24px,5vw,66px)}.desktop-nav a{font-size:14px;padding:9px 14px}.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;background:radial-gradient(circle at 50% 50%,rgba(255,255,255,.97) 0%,rgba(255,255,255,.91) 38%,rgba(255,255,255,.76) 62%,rgba(255,255,255,.58) 100%),linear-gradient(90deg,rgba(255,255,255,.88),rgba(255,255,255,.64)),url("../images/hero-bg.png") center/cover no-repeat;padding:128px 24px 60px}.hero-panel{max-width:760px}.eyebrow{font-size:12px;padding:10px 18px}.hero h1{font-size:clamp(40px,5.8vw,70px);line-height:1.02;margin:28px 0 18px}.hero p{font-size:clamp(17px,2vw,22px);line-height:1.5;max-width:640px;margin-bottom:30px}.button{font-size:16px;padding:16px 28px}.button.big{font-size:20px;padding:19px 42px}.hero-note{font-size:13px;margin-top:22px}.section{padding:58px clamp(22px,6vw,88px)}.section h2,.inner-hero h1{font-size:clamp(30px,4vw,48px)}.section p,.inner-hero p{font-size:17px}.service-card{border-radius:22px;padding:26px}.service-card h3{font-size:22px}.check-list li{font-size:18px;padding:18px 22px}.inner-hero{min-height:58vh;padding:140px clamp(24px,7vw,90px) 70px;background:linear-gradient(90deg,rgba(255,255,255,.96),rgba(255,255,255,.84),rgba(255,255,255,.66)),url("../images/hero-bg.png") center/cover no-repeat}.site-footer{font-size:15px;padding:38px clamp(22px,5vw,60px)}.footer-contact{font-size:17px}.wizard-body{background:radial-gradient(circle at center,rgba(255,255,255,.96) 0%,rgba(255,255,255,.9) 42%,rgba(255,255,255,.72) 100%),linear-gradient(90deg,rgba(255,255,255,.86),rgba(255,255,255,.62)),url("../images/hero-bg.png") center/cover no-repeat}.wizard-shell{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:34px 18px}.wizard-card{width:min(720px,88vw);min-height:auto;margin:0 auto;background:rgba(255,255,255,.94);border:1px solid rgba(230,222,211,.82);border-radius:24px;box-shadow:var(--shadow);padding:36px clamp(28px,4.5vw,52px) 42px}.wizard-head{margin-bottom:30px}.wizard-head img{width:132px}.x-link{width:44px;height:44px;font-size:34px}.progress-meta{font-size:14px;margin-bottom:12px}.progress-track{height:6px}.back-btn{font-size:15px;margin:24px 0}.question-title{font-size:clamp(26px,3.4vw,36px);line-height:1.15;margin-bottom:26px}.options{gap:10px}.option-card{min-height:66px;border-width:1px;border-radius:15px;grid-template-columns:44px 1fr 22px;gap:14px;padding:12px 18px;font-size:17px}.icon,.input-icon,.tick-small{width:38px;height:38px;border-radius:16px;font-size:20px}.chev{font-size:28px}.form-grid{gap:16px}.field label{font-size:15px;margin-bottom:7px}.input-shell{height:56px;border-width:1px;border-radius:15px;background:rgba(255,255,255,.78);padding:0 14px}.input-shell input,.input-shell select{font-size:15px}.form-button{min-height:58px;font-size:16px;margin-top:8px}.thank-you-page{background:radial-gradient(circle at center,rgba(255,255,255,.96),rgba(255,255,255,.78)),url("../images/hero-bg.png") center/cover no-repeat}.thank-card{max-width:720px;border-radius:24px;padding:38px}.thank-logo{width:128px}.success-icon{width:92px;height:92px;font-size:56px}.thank-card h1{font-size:44px}.thank-card h2{font-size:30px}.thank-card p{font-size:17px}.thank-list li{font-size:16px;padding:14px 18px}
 @media(max-width:820px){.site-header{padding:22px 22px}.brand img{width:118px}.hero{align-items:center;padding:108px 20px 46px;background:radial-gradient(circle at 50% 48%,rgba(255,255,255,.97) 0%,rgba(255,255,255,.91) 45%,rgba(255,255,255,.76) 74%,rgba(255,255,255,.62) 100%),url("../images/hero-bg.png") 60% center/cover no-repeat}.hero h1{font-size:40px}.hero p{font-size:17px}.button.big{font-size:17px;min-height:58px;padding:16px 20px}.wizard-body{background:radial-gradient(circle at center,rgba(255,255,255,.97),rgba(255,255,255,.82)),url("../images/hero-bg.png") 62% center/cover no-repeat}.wizard-shell{padding:18px 12px}.wizard-card{width:100%;border-radius:20px;padding:28px 22px 32px}.wizard-head{margin-bottom:24px}.wizard-head img{width:112px}.x-link{width:40px;height:40px;font-size:30px}.progress-meta{font-size:13px}.question-title{font-size:27px;margin-bottom:22px}.option-card{min-height:62px;grid-template-columns:38px 1fr 18px;font-size:16px;padding:10px 14px}.icon,.input-icon,.tick-small{width:34px;height:34px;font-size:18px}.input-shell{height:52px}.section h2,.inner-hero h1{font-size:30px}.section p,.inner-hero p{font-size:16px}}
 
-
-/* MOBILE WHITE READABILITY PATCH START */
-/* Keeps desktop unchanged. Makes mobile hero/pathway pages lighter so the navy Origin text remains readable. */
-@media (max-width: 768px) {
-  body,
-  .page,
-  .pathway-page,
-  .wizard-body {
-    background-color: #fffaf3 !important;
-  }
-
-  .pathway-hero::before,
-  .wizard-body::before,
-  .hero::before {
-    background: linear-gradient(
-      180deg,
-      rgba(255,255,255,.78) 0%,
-      rgba(255,255,255,.62) 42%,
-      rgba(255,255,255,.42) 100%
-    ) !important;
-  }
-
-  .pathway-hero,
-  .wizard-shell {
-    background-color: #fffaf3 !important;
-  }
-
-  .site-header,
-  .brand,
-  .brand img {
-    filter: none !important;
-    opacity: 1 !important;
-  }
-
-  .brand img {
-    max-width: 132px !important;
-    height: auto !important;
-  }
-}
-/* MOBILE WHITE READABILITY PATCH END */
-
-
-/* ORIGIN MOBILE WHITE FINAL FIX CSS */
-@media (max-width: 768px) {
-  html, body, .page, .pathway-page, .wizard-body, main {
-    background-color: #fffaf3 !important;
-  }
-
-  .hero, .hero-shell, .pathway-hero, .page-hero, .service-hero, .wizard-shell {
-    background-color: #fffaf3 !important;
-    filter: none !important;
-    opacity: 1 !important;
-    mix-blend-mode: normal !important;
-  }
-
-  .hero::before, .hero::after,
-  .hero-shell::before, .hero-shell::after,
-  .pathway-hero::before, .pathway-hero::after,
-  .page-hero::before, .page-hero::after,
-  .service-hero::before, .service-hero::after,
-  .wizard-shell::before, .wizard-shell::after,
-  .wizard-body::before, .wizard-body::after {
-    background: linear-gradient(180deg, rgba(255,255,255,.86) 0%, rgba(255,255,255,.72) 44%, rgba(255,255,255,.50) 100%) !important;
-    filter: none !important;
-    opacity: 1 !important;
-    mix-blend-mode: normal !important;
-  }
-
-  .hero-overlay, .mobile-overlay, .pathway-overlay, .dark-overlay, .overlay, .shade, .scrim {
-    background: rgba(255,255,255,.68) !important;
-    filter: none !important;
-    opacity: 1 !important;
-    mix-blend-mode: normal !important;
-  }
-
-  .site-header img, header img, .brand img, .logo img, .site-logo img {
-    opacity: 1 !important;
-    filter: none !important;
-    mix-blend-mode: normal !important;
-    background: transparent !important;
-  }
-}
-/* ORIGIN MOBILE WHITE FINAL FIX CSS END */
-
 /* =========================================================
-   ORIGIN V6 MOBILE INNER HERO WHITE FIX
-   Added by ChatGPT after inspecting this ZIP.
+   ORIGIN V6 CLEAN MOBILE LIGHT MODE FIX
+   Replaces the previous stacked mobile brown-overlay patches.
 
-   Why this is here:
-   - buying.html, selling.html, finance.html, and conveyancing.html
-     use <section class="inner-hero">.
-   - Previous mobile patches targeted .hero, .pathway-hero,
-     .page-hero, .service-hero, and .wizard-shell, but missed
-     .inner-hero, so service pages could still show the brown tint.
-   - This patch is mobile-only and placed at the very end so it wins.
+   Desktop is intentionally untouched.
+   These rules apply only at phone/tablet widths.
    ========================================================= */
-@media (max-width: 768px) {
+
+@media (max-width: 900px) {
+
   html,
-  body,
-  main,
-  .page,
-  .pathway-page,
-  .wizard-body {
+  body {
+    background: #fffaf3 !important;
     background-color: #fffaf3 !important;
   }
 
-  .inner-hero {
-    background:
-      linear-gradient(
-        180deg,
-        rgba(255,255,255,.96) 0%,
-        rgba(255,255,255,.92) 48%,
-        rgba(255,250,243,.88) 100%
-      ),
-      url("../images/hero-bg.png") 62% center/cover no-repeat !important;
+  /* Remove the brown/dark property image from mobile hero-style pages only. */
+  .hero,
+  .inner-hero,
+  .thank-you-page,
+  body.wizard-body {
+    background: #fffaf3 !important;
     background-color: #fffaf3 !important;
-    filter: none !important;
-    opacity: 1 !important;
-    mix-blend-mode: normal !important;
+    background-image: none !important;
   }
 
+  .hero::before,
+  .hero::after,
   .inner-hero::before,
-  .inner-hero::after {
+  .inner-hero::after,
+  .thank-you-page::before,
+  .thank-you-page::after,
+  body.wizard-body::before,
+  body.wizard-body::after {
     content: none !important;
     display: none !important;
-    background: transparent !important;
+    background: none !important;
     opacity: 0 !important;
     filter: none !important;
     mix-blend-mode: normal !important;
   }
 
-  .inner-hero h1,
-  .inner-hero h2,
-  .inner-hero h3,
-  .inner-hero p,
-  .inner-hero a,
-  .inner-hero span {
+  /* Wizard page source fix. */
+  body.wizard-body {
+    overflow: auto !important;
+    color: #06172d !important;
+  }
+
+  body.wizard-body .site-header {
+    display: none !important;
+  }
+
+  main.wizard-shell,
+  body.wizard-body .wizard-shell {
+    min-height: 100vh !important;
+    height: auto !important;
+    padding: 16px 12px 28px !important;
+    display: flex !important;
+    align-items: flex-start !important;
+    justify-content: center !important;
+    background: #fffaf3 !important;
+    background-color: #fffaf3 !important;
+    background-image: none !important;
+  }
+
+  body.wizard-body .wizard-card {
+    width: 100% !important;
+    max-width: 720px !important;
+    min-height: calc(100vh - 32px) !important;
+    margin: 0 auto !important;
+    padding: 28px 22px 34px !important;
+    border-radius: 28px !important;
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    color: #06172d !important;
+    border: 1px solid rgba(6, 23, 45, 0.12) !important;
+    box-shadow: 0 18px 45px rgba(6, 23, 45, 0.10) !important;
+  }
+
+  body.wizard-body .wizard-card::before,
+  body.wizard-body .wizard-card::after {
+    content: none !important;
+    display: none !important;
+  }
+
+  body.wizard-body .wizard-head {
+    margin-bottom: 34px !important;
+  }
+
+  body.wizard-body .wizard-head img {
+    width: 96px !important;
+    max-width: 96px !important;
+    opacity: 1 !important;
     filter: none !important;
     mix-blend-mode: normal !important;
+    background: transparent !important;
+  }
+
+  body.wizard-body .x-link {
+    width: 54px !important;
+    height: 54px !important;
+    font-size: 39px !important;
+    background: #f4eadc !important;
+    color: #a97724 !important;
+  }
+
+  body.wizard-body .progress-meta {
+    color: #4f5d6b !important;
+    font-size: 19px !important;
+  }
+
+  body.wizard-body .progress-track {
+    background: #eee4d8 !important;
+  }
+
+  body.wizard-body .progress-track div {
+    background: linear-gradient(90deg, #b88734, #d1a75c) !important;
+  }
+
+  body.wizard-body .back-btn {
+    color: #a97724 !important;
+    font-size: 22px !important;
+  }
+
+  body.wizard-body .question-title,
+  body.wizard-body .wizard-card h1,
+  body.wizard-body .wizard-card h2,
+  body.wizard-body .wizard-card h3 {
+    color: #06172d !important;
+  }
+
+  body.wizard-body .wizard-card p,
+  body.wizard-body .wizard-card span,
+  body.wizard-body .field label {
+    color: #4f5d6b !important;
+  }
+
+  body.wizard-body .option-card {
+    min-height: 88px !important;
+    height: auto !important;
+    grid-template-columns: 56px 1fr 24px !important;
+    padding: 16px 18px !important;
+    border-radius: 23px !important;
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    color: #06172d !important;
+    border: 1.5px solid rgba(6, 23, 45, 0.14) !important;
+    box-shadow: none !important;
+  }
+
+  body.wizard-body .option-card span,
+  body.wizard-body .option-card strong,
+  body.wizard-body .option-card b {
+    color: #06172d !important;
+  }
+
+  body.wizard-body .icon,
+  body.wizard-body .input-icon,
+  body.wizard-body .tick-small {
+    width: 52px !important;
+    height: 52px !important;
+    border-radius: 18px !important;
+    background: #f4eadc !important;
+    color: #a97724 !important;
+  }
+
+  body.wizard-body .chev {
+    color: #a97724 !important;
+  }
+
+  body.wizard-body .input-shell {
+    height: 70px !important;
+    border-radius: 20px !important;
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    border: 1.5px solid rgba(6, 23, 45, 0.14) !important;
+  }
+
+  body.wizard-body input,
+  body.wizard-body select,
+  body.wizard-body textarea {
+    background: transparent !important;
+    color: #06172d !important;
+  }
+
+  body.wizard-body .form-button {
+    height: 70px !important;
+    min-height: 70px !important;
+  }
+
+  /* Service pages mobile: light, readable, no brown image overlay. */
+  .inner-hero {
+    min-height: auto !important;
+    padding: 140px 24px 70px !important;
+    color: #06172d !important;
   }
 
   .inner-hero h1,
@@ -1166,176 +1222,29 @@ html,body{font-size:15px;background:#fbfaf8}.brand img{width:138px;height:auto;o
     color: #4f5d6b !important;
   }
 
+  /* Homepage mobile: keep layout, remove brown image tint. */
+  .hero {
+    align-items: center !important;
+    color: #06172d !important;
+  }
+
+  .hero h1 {
+    color: #06172d !important;
+  }
+
+  .hero p {
+    color: #4f5d6b !important;
+  }
+
   .site-header,
   .brand,
+  .brand img,
   .logo,
   .site-logo {
-    filter: none !important;
-    opacity: 1 !important;
-    mix-blend-mode: normal !important;
-  }
-
-  .site-header img,
-  header img,
-  .brand img,
-  .logo img,
-  .site-logo img {
     opacity: 1 !important;
     filter: none !important;
     mix-blend-mode: normal !important;
-    background: transparent !important;
-  }
-}
-/* ORIGIN V6 MOBILE INNER HERO WHITE FIX END */
-
-/* ORIGIN V6 TRUE MOBILE WIZARD WHITE FIX */
-@media (max-width: 820px) {
-  body,
-  main,
-  .page,
-  .wizard-shell,
-  .wizard-screen,
-  .wizard-panel,
-  .pathway-page {
-    background: #fffaf3 !important;
-    background-color: #fffaf3 !important;
-    background-image: none !important;
-  }
-
-  .wizard-panel,
-  .wizard-card,
-  .option-card,
-  .choice-card {
-    background: #ffffff !important;
-    color: #06172d !important;
-    border-color: rgba(6, 23, 45, 0.12) !important;
-  }
-
-  .wizard-panel h1,
-  .wizard-panel h2,
-  .wizard-panel h3,
-  .wizard-panel p,
-  .wizard-panel span,
-  .option-card,
-  .option-card span,
-  .choice-card,
-  .choice-card span {
-    color: #06172d !important;
-  }
-
-  .wizard-shell::before,
-  .wizard-shell::after,
-  .wizard-screen::before,
-  .wizard-screen::after,
-  .wizard-panel::before,
-  .wizard-panel::after {
-    display: none !important;
-    content: none !important;
-    background: none !important;
-    opacity: 0 !important;
-  }
-}
-/* ORIGIN V6 TRUE MOBILE WIZARD WHITE FIX END */
-
-/* TRUE MOBILE BROWN BACKGROUND KILL SWITCH */
-@media (max-width: 900px) {
-  html,
-  body,
-  main,
-  .hero,
-  .inner-hero,
-  .wizard-body,
-  .wizard-shell,
-  .wizard-card,
-  .pathway-page,
-  .thank-you-page {
-    background: #fffaf3 !important;
-    background-color: #fffaf3 !important;
-    background-image: none !important;
-  }
-
-  .hero::before,
-  .hero::after,
-  .inner-hero::before,
-  .inner-hero::after,
-  .wizard-body::before,
-  .wizard-body::after,
-  .wizard-shell::before,
-  .wizard-shell::after {
-    display: none !important;
-    content: none !important;
-    background: none !important;
-    opacity: 0 !important;
-  }
-
-  .wizard-card,
-  .option-card,
-  .input-shell {
-    background: #ffffff !important;
   }
 }
 
-/* FINAL TRUE MOBILE BROWN FIX */
-@media (max-width: 900px) {
-  body.wizard-body,
-  body.wizard-body main,
-  main.wizard-shell {
-    background: #fffaf3 !important;
-    background-color: #fffaf3 !important;
-    background-image: none !important;
-  }
-
-  .wizard-card {
-    background: #ffffff !important;
-    color: #06172d !important;
-    border-color: rgba(6, 23, 45, 0.12) !important;
-    box-shadow: 0 18px 45px rgba(6, 23, 45, 0.12) !important;
-  }
-
-  .wizard-card h1,
-  .wizard-card h2,
-  .wizard-card h3,
-  .wizard-card p,
-  .wizard-card span,
-  .question-title,
-  .progress-meta {
-    color: #06172d !important;
-  }
-
-  .option-card,
-  .input-shell,
-  select,
-  input,
-  textarea {
-    background: #ffffff !important;
-    color: #06172d !important;
-    border-color: rgba(6, 23, 45, 0.15) !important;
-  }
-}
-/* FINAL TRUE MOBILE BROWN FIX END */
-
-/* FINAL MOBILE WIZARD CARD LIGHT FIX */
-@media (max-width: 900px) {
-  body.wizard-body .wizard-card,
-  body.wizard-body .wizard-card *,
-  body.wizard-body .option-card {
-    background-color: #fffaf3 !important;
-  }
-
-  body.wizard-body .option-card {
-    background: #ffffff !important;
-  }
-
-  body.wizard-body .icon-box,
-  body.wizard-body .option-icon {
-    background: #f4eadc !important;
-  }
-
-  body.wizard-body .wizard-card,
-  body.wizard-body .question-title,
-  body.wizard-body .option-card,
-  body.wizard-body .option-card span {
-    color: #06172d !important;
-  }
-}
-/* FINAL MOBILE WIZARD CARD LIGHT FIX END */
+/* ORIGIN V6 CLEAN MOBILE LIGHT MODE FIX END */
