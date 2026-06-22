@@ -1,0 +1,560 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Property Pathway Check | Origin Property Concierge</title>
+  <meta name="description" content="Create your Origin Property Concierge pathway with a guided buying, selling, finance or conveyancing questionnaire.">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+<style>
+/* ORIGIN PATHWAY PATCH START */
+/* Centres only the pathway box on property-pathway.html and keeps all wizard content/layout intact. */
+body.wizard-body .wizard-shell {
+  min-height: 100vh !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 96px 18px 48px !important;
+}
+
+body.wizard-body .wizard-card {
+  margin: 0 auto !important;
+}
+
+body.wizard-body .site-header .brand img {
+  width: 76px !important;
+  height: auto !important;
+  object-fit: contain !important;
+  background: transparent !important;
+}
+
+@media (max-width: 820px) {
+  body.wizard-body .wizard-shell {
+    min-height: 100vh !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 88px 12px 28px !important;
+  }
+
+  body.wizard-body .site-header .brand img {
+    width: 62px !important;
+  }
+}
+/* ORIGIN PATHWAY PATCH END */
+</style>
+
+
+<style>
+/* Other support details input */
+.textarea-shell {
+  min-height: 130px;
+  align-items: flex-start !important;
+}
+.textarea-shell textarea {
+  width: 100%;
+  min-height: 128px;
+  border: 0;
+  outline: 0;
+  resize: vertical;
+  background: transparent;
+  font: inherit;
+  color: inherit;
+  line-height: 1.45;
+  padding: 14px 0;
+}
+</style>
+
+
+
+
+<style>
+/* TEXT BOX FOR OTHER ANSWERS */
+.textarea-shell {
+  min-height: 142px !important;
+  align-items: flex-start !important;
+  padding-top: 0 !important;
+}
+.textarea-shell textarea {
+  width: 100% !important;
+  min-height: 138px !important;
+  border: 0 !important;
+  outline: 0 !important;
+  resize: vertical !important;
+  background: transparent !important;
+  font: inherit !important;
+  color: inherit !important;
+  line-height: 1.45 !important;
+  padding: 16px 0 !important;
+}
+</style>
+
+
+<style>
+/* INLINE OTHER TEXT INPUT */
+.inline-other-wrap {
+  margin: -2px 0 12px 0;
+  padding: 18px 18px 20px;
+  border: 1px solid rgba(200,149,61,.34);
+  border-radius: 18px;
+  background: rgba(255,255,255,.78);
+}
+.inline-other-wrap label {
+  display: block;
+  font-weight: 800;
+  color: #07182f;
+  margin-bottom: 10px;
+}
+.inline-other-wrap textarea {
+  width: 100%;
+  min-height: 118px;
+  border: 1px solid rgba(200,149,61,.36);
+  border-radius: 14px;
+  outline: none;
+  resize: vertical;
+  background: #fff;
+  font: inherit;
+  color: inherit;
+  line-height: 1.45;
+  padding: 14px 16px;
+}
+.inline-other-error {
+  display: none;
+  margin-top: 8px;
+  color: #b42318;
+  font-size: 13px;
+}
+.inline-other-btn {
+  margin-top: 14px;
+  width: auto;
+  min-width: 180px;
+}
+</style>
+
+
+<style>
+/* PRODUCTION FIX: show Continue button after Other text input */
+.wizard-card {
+  overflow: visible !important;
+}
+.inline-other-wrap {
+  margin: 10px 0 16px 0 !important;
+  padding: 18px 18px 18px !important;
+  border: 1px solid rgba(200,149,61,.38) !important;
+  border-radius: 18px !important;
+  background: rgba(255,255,255,.86) !important;
+}
+.inline-other-wrap label {
+  display: block !important;
+  font-weight: 800 !important;
+  color: #07182f !important;
+  margin-bottom: 10px !important;
+}
+.inline-other-wrap textarea {
+  width: 100% !important;
+  min-height: 96px !important;
+  max-height: 160px !important;
+  border: 1px solid rgba(200,149,61,.36) !important;
+  border-radius: 14px !important;
+  outline: none !important;
+  resize: vertical !important;
+  background: #fff !important;
+  font: inherit !important;
+  color: inherit !important;
+  line-height: 1.45 !important;
+  padding: 14px 16px !important;
+  display: block !important;
+}
+.inline-other-error {
+  display: none;
+  margin-top: 8px;
+  color: #b42318;
+  font-size: 13px;
+}
+.inline-other-continue {
+  margin-top: 14px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 14px !important;
+  min-width: 180px !important;
+  height: 50px !important;
+  padding: 0 24px !important;
+  border: 0 !important;
+  border-radius: 999px !important;
+  background: #00172e !important;
+  color: #fff !important;
+  font: inherit !important;
+  font-weight: 800 !important;
+  cursor: pointer !important;
+  box-shadow: 0 10px 20px rgba(0,17,40,.14) !important;
+}
+.inline-other-continue b {
+  font-size: 20px;
+  line-height: 1;
+}
+</style>
+
+
+<style>
+/* Hide the static Netlify detector form visually but keep it parseable at deploy time. */
+.netlify-form-detector {
+  position: absolute !important;
+  left: -99999px !important;
+  top: auto !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+</style>
+
+
+<style>
+/* ORIGIN PRODUCTION FINAL PATCH */
+
+/* Hide Netlify detector form but keep it parseable by Netlify */
+.netlify-form-detector {
+  position:absolute !important;
+  left:-99999px !important;
+  top:auto !important;
+  width:1px !important;
+  height:1px !important;
+  overflow:hidden !important;
+  opacity:0 !important;
+  pointer-events:none !important;
+}
+
+/* Inline Other text box + visible Continue button */
+.wizard-card { overflow:visible !important; }
+.inline-other-wrap {
+  margin:10px 0 16px !important;
+  padding:18px !important;
+  border:1px solid rgba(200,149,61,.38) !important;
+  border-radius:18px !important;
+  background:rgba(255,255,255,.88) !important;
+}
+.inline-other-wrap label {
+  display:block !important;
+  font-weight:800 !important;
+  color:#07182f !important;
+  margin-bottom:10px !important;
+}
+.inline-other-wrap textarea {
+  width:100% !important;
+  min-height:96px !important;
+  max-height:160px !important;
+  border:1px solid rgba(200,149,61,.36) !important;
+  border-radius:14px !important;
+  outline:none !important;
+  resize:vertical !important;
+  background:#fff !important;
+  font:inherit !important;
+  color:inherit !important;
+  line-height:1.45 !important;
+  padding:14px 16px !important;
+  display:block !important;
+}
+.inline-other-error {
+  display:none;
+  margin-top:8px;
+  color:#b42318;
+  font-size:13px;
+}
+.inline-other-continue {
+  margin-top:14px !important;
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  gap:14px !important;
+  min-width:180px !important;
+  height:50px !important;
+  padding:0 24px !important;
+  border:0 !important;
+  border-radius:999px !important;
+  background:#00172e !important;
+  color:#fff !important;
+  font:inherit !important;
+  font-weight:800 !important;
+  cursor:pointer !important;
+  box-shadow:0 10px 20px rgba(0,17,40,.14) !important;
+}
+.inline-other-continue b { font-size:20px; line-height:1; }
+
+/* Mobile white/light overlay fix so Origin logo text is readable */
+@media (max-width: 768px) {
+  html, body {
+    background:#fffaf3 !important;
+  }
+
+  body::before,
+  body::after,
+  .page::before,
+  .page::after,
+  .hero::before,
+  .hero::after,
+  .pathway-hero::before,
+  .pathway-hero::after,
+  .page-hero::before,
+  .page-hero::after,
+  .service-hero::before,
+  .service-hero::after,
+  .wizard-body::before,
+  .wizard-body::after,
+  .wizard-shell::before,
+  .wizard-shell::after {
+    background:linear-gradient(
+      180deg,
+      rgba(255,255,255,.82) 0%,
+      rgba(255,255,255,.64) 45%,
+      rgba(255,255,255,.42) 100%
+    ) !important;
+    mix-blend-mode:normal !important;
+  }
+
+  .hero,
+  .pathway-hero,
+  .page-hero,
+  .service-hero,
+  .wizard-shell {
+    background-color:#fffaf3 !important;
+  }
+
+  .mobile-overlay,
+  .hero-overlay,
+  .pathway-overlay,
+  .dark-overlay,
+  .overlay {
+    background:rgba(255,255,255,.58) !important;
+  }
+
+  .brand img,
+  .site-logo img,
+  .logo img,
+  .site-header img {
+    opacity:1 !important;
+    filter:none !important;
+    mix-blend-mode:normal !important;
+    max-width:132px !important;
+    height:auto !important;
+  }
+
+  .brand,
+  .site-logo,
+  .logo {
+    opacity:1 !important;
+    filter:none !important;
+    mix-blend-mode:normal !important;
+  }
+}
+
+/* Thank-you page duplicate-card-logo fix: keep header logo, hide logo inside thank-you card */
+.thank-card img[alt="Origin"],
+.success-card img[alt="Origin"],
+.thank-card .brand,
+.success-card .brand,
+.thank-card .logo,
+.success-card .logo,
+.thank-card .card-logo,
+.success-card .card-logo,
+.thank-card .thank-logo,
+.success-card .thank-logo,
+.thank-card .thankyou-logo,
+.success-card .thankyou-logo,
+.thank-card .thank-you-logo,
+.success-card .thank-you-logo {
+  display:none !important;
+}
+
+/* ORIGIN PRODUCTION FINAL PATCH END */
+</style>
+
+
+<style>
+/* ORIGIN MOBILE WHITE FINAL FIX */
+@media (max-width: 768px) {
+  html,
+  body {
+    background: #fffaf3 !important;
+  }
+
+  body,
+  .page,
+  .pathway-page,
+  .wizard-body,
+  main {
+    background-color: #fffaf3 !important;
+  }
+
+  .hero,
+  .hero-shell,
+  .pathway-hero,
+  .page-hero,
+  .service-hero,
+  .wizard-shell,
+  .thank-you-page,
+  .thankyou-page,
+  .success-page {
+    background-color: #fffaf3 !important;
+    filter: none !important;
+    opacity: 1 !important;
+    mix-blend-mode: normal !important;
+  }
+
+  .hero::before,
+  .hero::after,
+  .hero-shell::before,
+  .hero-shell::after,
+  .pathway-hero::before,
+  .pathway-hero::after,
+  .page-hero::before,
+  .page-hero::after,
+  .service-hero::before,
+  .service-hero::after,
+  .wizard-shell::before,
+  .wizard-shell::after,
+  .wizard-body::before,
+  .wizard-body::after {
+    background: linear-gradient(
+      180deg,
+      rgba(255,255,255,.86) 0%,
+      rgba(255,255,255,.72) 44%,
+      rgba(255,255,255,.50) 100%
+    ) !important;
+    filter: none !important;
+    opacity: 1 !important;
+    mix-blend-mode: normal !important;
+  }
+
+  .hero-overlay,
+  .mobile-overlay,
+  .pathway-overlay,
+  .dark-overlay,
+  .overlay,
+  .shade,
+  .scrim {
+    background: rgba(255,255,255,.68) !important;
+    filter: none !important;
+    opacity: 1 !important;
+    mix-blend-mode: normal !important;
+  }
+
+  .site-header,
+  header,
+  .brand,
+  .logo,
+  .site-logo {
+    background: transparent !important;
+    filter: none !important;
+    opacity: 1 !important;
+    mix-blend-mode: normal !important;
+  }
+
+  .site-header img,
+  header img,
+  .brand img,
+  .logo img,
+  .site-logo img {
+    opacity: 1 !important;
+    filter: none !important;
+    mix-blend-mode: normal !important;
+    background: transparent !important;
+  }
+
+  /* If page uses dark text overlay containers, keep text readable */
+  .hero-content,
+  .pathway-content,
+  .service-content,
+  .page-hero-content {
+    color: #07182f !important;
+  }
+
+  .hero-content p,
+  .pathway-content p,
+  .service-content p,
+  .page-hero-content p {
+    color: rgba(7,24,47,.72) !important;
+  }
+
+  /* Keep hamburger visible */
+  .menu-toggle span,
+  .menu-toggle::before,
+  .menu-toggle::after,
+  .hamburger span,
+  .hamburger::before,
+  .hamburger::after {
+    background: #07182f !important;
+  }
+}
+/* ORIGIN MOBILE WHITE FINAL FIX END */
+</style>
+
+</head>
+
+
+
+
+<!-- NETLIFY STATIC FORM DETECTION - DO NOT REMOVE -->
+
+<!-- END NETLIFY STATIC FORM DETECTION -->
+
+
+<form name="origin-property-pathway" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
+  <input type="hidden" name="form-name" value="origin-property-pathway">
+  <input name="bot-field">
+  <input name="name">
+  <input name="mobile">
+  <input name="email">
+  <input name="journey">
+  <input name="support">
+  <input name="otherSupportDetails">
+  <input name="otherPriorityDetails">
+  <input name="otherFinanceDetails">
+  <textarea name="pathway"></textarea>
+</form>
+
+<body class="wizard-body">
+
+<header class="site-header">
+  <a class="brand" href="index.html"><img src="assets/images/origin-logo.png" alt="Origin"></a>
+  <button class="hamburger" id="menuBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
+  <nav class="desktop-nav">
+    <a href="buying.html">Buying</a>
+    <a href="selling.html">Selling</a>
+    <a href="finance.html">Finance</a>
+    <a href="conveyancing.html">Conveyancing</a>
+    <a href="property-pathway.html" class="nav-cta">Start Pathway</a>
+  </nav>
+</header>
+<div class="mobile-menu" id="mobileMenu" hidden>
+  <button class="mobile-close" id="closeMenu" aria-label="Close menu">×</button>
+  <a href="index.html">Home</a>
+  <a href="buying.html">Buying Support</a>
+  <a href="selling.html">Selling Support</a>
+  <a href="finance.html">Finance & Refinancing</a>
+  <a href="conveyancing.html">Conveyancing / Legal</a>
+  <a href="property-pathway.html">Start Pathway</a>
+  <a href="mailto:hello@originpropertyconcierge.com.au">Contact</a>
+</div>
+
+<main class="wizard-shell">
+  <section class="wizard-card">
+    <div class="wizard-head wizard-head-no-logo">
+      <a class="x-link" href="index.html">×</a>
+    </div>
+    <div class="progress-area">
+      <div class="progress-meta"><span id="stepText">STEP 1 OF 4</span><span id="percentText">25%</span></div>
+      <div class="progress-track"><div id="progressFill"></div></div>
+    </div>
+    <button id="backBtn" class="back-btn">← Back</button>
+    <div id="wizardContent"></div>
+  </section>
+</main>
+
+
+
+<script src="assets/js/site.js"></script>
+<script src="assets/js/wizard.js"></script>
+</body>
+</html>

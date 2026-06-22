@@ -1,0 +1,11 @@
+OriginV6 Production Mobile Fix
+
+Fixed:
+- Mobile view made lighter/white so the navy Origin logo text is readable.
+- Thank-you page duplicate logo inside the card is hidden/removed.
+- Other text box Continue button remains fixed.
+- Debug screen remains removed.
+
+Important deployment note:
+When deploying to Netlify, upload the CONTENTS inside the OriginV6 folder to the Netlify root,
+or set OriginV6 as the publish directory. Do not deploy a parent folder that contains OriginV6 as a subfolder.

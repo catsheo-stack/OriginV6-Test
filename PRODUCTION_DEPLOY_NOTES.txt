@@ -1,0 +1,18 @@
+OriginV6 Production Build
+
+This production build removes the temporary debug screen.
+
+Included:
+- Inline Other text boxes
+- Netlify Forms capture
+- Thank-you page redirect after submit
+- Captured fields:
+  name, mobile, email, journey, support,
+  otherSupportDetails, otherPriorityDetails, otherFinanceDetails,
+  pathway JSON
+
+Deployment:
+1. Deploy the OriginV6 folder to Netlify.
+2. Submit a test form from the live Netlify URL.
+3. Check Netlify Dashboard > Forms > origin-property-pathway.
+4. Add email notifications in Netlify Forms settings.

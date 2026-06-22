@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thank You | Origin Property Concierge</title>
+  <meta name="description" content="Your Origin Property Concierge pathway has been created.">
+  <meta property="og:title" content="Thank You | Origin Property Concierge">
+  <meta property="og:description" content="Your Origin Property Concierge pathway has been created.">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="/">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+<style>
+/* THANK YOU DUPLICATE LOGO PATCH START */
+/* Removes the extra logo inside the thank-you card while keeping the top-left header logo. */
+.thank-card .brand,
+.thank-card .logo,
+.thank-card .card-logo,
+.thank-card .thank-logo,
+.thank-card .thankyou-logo,
+.thank-card .thank-you-logo,
+.thank-card img[alt="Origin"],
+.success-card .brand,
+.success-card .logo,
+.success-card .card-logo,
+.success-card .thank-logo,
+.success-card .thankyou-logo,
+.success-card .thank-you-logo,
+.success-card img[alt="Origin"] {
+  display: none !important;
+}
+
+@media (max-width: 768px) {
+  body {
+    background: #fffaf3 !important;
+  }
+
+  .thank-you-page,
+  .thankyou-page,
+  .success-page {
+    background-color: #fffaf3 !important;
+  }
+
+  .thank-card,
+  .success-card {
+    background: rgba(18,17,13,.94) !important;
+  }
+
+  .site-header img,
+  .brand img {
+    filter: none !important;
+    opacity: 1 !important;
+    max-width: 132px !important;
+    height: auto !important;
+  }
+}
+/* THANK YOU DUPLICATE LOGO PATCH END */
+</style>
+
+
+<style>
+/* ORIGIN PRODUCTION FINAL PATCH */
+
+/* Hide Netlify detector form but keep it parseable by Netlify */
+.netlify-form-detector {
+  position:absolute !important;
+  left:-99999px !important;
+  top:auto !important;
+  width:1px !important;
+  height:1px !important;
+  overflow:hidden !important;
+  opacity:0 !important;
+  pointer-events:none !important;
+}
+
+/* Inline Other text box + visible Continue button */
+.wizard-card { overflow:visible !important; }
+.inline-other-wrap {
+  margin:10px 0 16px !important;
+  padding:18px !important;
+  border:1px solid rgba(200,149,61,.38) !important;
+  border-radius:18px !important;
+  background:rgba(255,255,255,.88) !important;
+}
+.inline-other-wrap label {
+  display:block !important;
+  font-weight:800 !important;
+  color:#07182f !important;
+  margin-bottom:10px !important;
+}
+.inline-other-wrap textarea {
+  width:100% !important;
+  min-height:96px !important;
+  max-height:160px !important;
+  border:1px solid rgba(200,149,61,.36) !important;
+  border-radius:14px !important;
+  outline:none !important;
+  resize:vertical !important;
+  background:#fff !important;
+  font:inherit !important;
+  color:inherit !important;
+  line-height:1.45 !important;
+  padding:14px 16px !important;
+  display:block !important;
+}
+.inline-other-error {
+  display:none;
+  margin-top:8px;
+  color:#b42318;
+  font-size:13px;
+}
+.inline-other-continue {
+  margin-top:14px !important;
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  gap:14px !important;
+  min-width:180px !important;
+  height:50px !important;
+  padding:0 24px !important;
+  border:0 !important;
+  border-radius:999px !important;
+  background:#00172e !important;
+  color:#fff !important;
+  font:inherit !important;
+  font-weight:800 !important;
+  cursor:pointer !important;
+  box-shadow:0 10px 20px rgba(0,17,40,.14) !important;
+}
+.inline-other-continue b { font-size:20px; line-height:1; }
+
+/* Mobile white/light overlay fix so Origin logo text is readable */
+@media (max-width: 768px) {
+  html, body {
+    background:#fffaf3 !important;
+  }
+
+  body::before,
+  body::after,
+  .page::before,
+  .page::after,
+  .hero::before,
+  .hero::after,
+  .pathway-hero::before,
+  .pathway-hero::after,
+  .page-hero::before,
+  .page-hero::after,
+  .service-hero::before,
+  .service-hero::after,
+  .wizard-body::before,
+  .wizard-body::after,
+  .wizard-shell::before,
+  .wizard-shell::after {
+    background:linear-gradient(
+      180deg,
+      rgba(255,255,255,.82) 0%,
+      rgba(255,255,255,.64) 45%,
+      rgba(255,255,255,.42) 100%
+    ) !important;
+    mix-blend-mode:normal !important;
+  }
+
+  .hero,
+  .pathway-hero,
+  .page-hero,
+  .service-hero,
+  .wizard-shell {
+    background-color:#fffaf3 !important;
+  }
+
+  .mobile-overlay,
+  .hero-overlay,
+  .pathway-overlay,
+  .dark-overlay,
+  .overlay {
+    background:rgba(255,255,255,.58) !important;
+  }
+
+  .brand img,
+  .site-logo img,
+  .logo img,
+  .site-header img {
+    opacity:1 !important;
+    filter:none !important;
+    mix-blend-mode:normal !important;
+    max-width:132px !important;
+    height:auto !important;
+  }
+
+  .brand,
+  .site-logo,
+  .logo {
+    opacity:1 !important;
+    filter:none !important;
+    mix-blend-mode:normal !important;
+  }
+}
+
+/* Thank-you page duplicate-card-logo fix: keep header logo, hide logo inside thank-you card */
+.thank-card img[alt="Origin"],
+.success-card img[alt="Origin"],
+.thank-card .brand,
+.success-card .brand,
+.thank-card .logo,
+.success-card .logo,
+.thank-card .card-logo,
+.success-card .card-logo,
+.thank-card .thank-logo,
+.success-card .thank-logo,
+.thank-card .thankyou-logo,
+.success-card .thankyou-logo,
+.thank-card .thank-you-logo,
+.success-card .thank-you-logo {
+  display:none !important;
+}
+
+/* ORIGIN PRODUCTION FINAL PATCH END */
+</style>
+
+
+<style>
+/* ORIGIN MOBILE WHITE FINAL FIX */
+@media (max-width: 768px) {
+  html,
+  body {
+    background: #fffaf3 !important;
+  }
+
+  body,
+  .page,
+  .pathway-page,
+  .wizard-body,
+  main {
+    background-color: #fffaf3 !important;
+  }
+
+  .hero,
+  .hero-shell,
+  .pathway-hero,
+  .page-hero,
+  .service-hero,
+  .wizard-shell,
+  .thank-you-page,
+  .thankyou-page,
+  .success-page {
+    background-color: #fffaf3 !important;
+    filter: none !important;
+    opacity: 1 !important;
+    mix-blend-mode: normal !important;
+  }
+
+  .hero::before,
+  .hero::after,
+  .hero-shell::before,
+  .hero-shell::after,
+  .pathway-hero::before,
+  .pathway-hero::after,
+  .page-hero::before,
+  .page-hero::after,
+  .service-hero::before,
+  .service-hero::after,
+  .wizard-shell::before,
+  .wizard-shell::after,
+  .wizard-body::before,
+  .wizard-body::after {
+    background: linear-gradient(
+      180deg,
+      rgba(255,255,255,.86) 0%,
+      rgba(255,255,255,.72) 44%,
+      rgba(255,255,255,.50) 100%
+    ) !important;
+    filter: none !important;
+    opacity: 1 !important;
+    mix-blend-mode: normal !important;
+  }
+
+  .hero-overlay,
+  .mobile-overlay,
+  .pathway-overlay,
+  .dark-overlay,
+  .overlay,
+  .shade,
+  .scrim {
+    background: rgba(255,255,255,.68) !important;
+    filter: none !important;
+    opacity: 1 !important;
+    mix-blend-mode: normal !important;
+  }
+
+  .site-header,
+  header,
+  .brand,
+  .logo,
+  .site-logo {
+    background: transparent !important;
+    filter: none !important;
+    opacity: 1 !important;
+    mix-blend-mode: normal !important;
+  }
+
+  .site-header img,
+  header img,
+  .brand img,
+  .logo img,
+  .site-logo img {
+    opacity: 1 !important;
+    filter: none !important;
+    mix-blend-mode: normal !important;
+    background: transparent !important;
+  }
+
+  /* If page uses dark text overlay containers, keep text readable */
+  .hero-content,
+  .pathway-content,
+  .service-content,
+  .page-hero-content {
+    color: #07182f !important;
+  }
+
+  .hero-content p,
+  .pathway-content p,
+  .service-content p,
+  .page-hero-content p {
+    color: rgba(7,24,47,.72) !important;
+  }
+
+  /* Keep hamburger visible */
+  .menu-toggle span,
+  .menu-toggle::before,
+  .menu-toggle::after,
+  .hamburger span,
+  .hamburger::before,
+  .hamburger::after {
+    background: #07182f !important;
+  }
+}
+/* ORIGIN MOBILE WHITE FINAL FIX END */
+</style>
+
+</head>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="index.html"><img src="assets/images/origin-logo.png" alt="Origin"></a>
+  <button class="hamburger" id="menuBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
+  <nav class="desktop-nav">
+    <a href="buying.html">Buying</a>
+    <a href="selling.html">Selling</a>
+    <a href="finance.html">Finance</a>
+    <a href="conveyancing.html">Conveyancing</a>
+    <a href="property-pathway.html" class="nav-cta">Start Pathway</a>
+  </nav>
+</header>
+<div class="mobile-menu" id="mobileMenu" hidden>
+  <button class="mobile-close" id="closeMenu" aria-label="Close menu">×</button>
+  <a href="index.html">Home</a>
+  <a href="buying.html">Buying Support</a>
+  <a href="selling.html">Selling Support</a>
+  <a href="finance.html">Finance & Refinancing</a>
+  <a href="conveyancing.html">Conveyancing / Legal</a>
+  <a href="property-pathway.html">Start Pathway</a>
+  <a href="mailto:hello@originpropertyconcierge.com.au">Contact</a>
+</div>
+
+
+<main>
+  <section class="thank-you-page">
+    <div class="thank-card">
+      <img class="thank-logo" src="assets/images/origin-logo.png" alt="Origin">
+      <div class="success-icon">✓</div>
+      <h1>Thank You</h1>
+      <h2>Your Property Pathway<br>Has Been Created</h2>
+      <p>Based on your answers, we'll review your situation and contact you shortly with the most appropriate next step.</p>
+      <h3>If suitable, we may connect you with:</h3>
+      <ul class="thank-list">
+        <li>Conveyancing Support</li>
+        <li>Finance Specialists</li>
+        <li>Property Buying Support</li>
+        <li>Settlement Assistance</li>
+      </ul>
+      <a class="return-link" href="index.html">Return to homepage →</a>
+    </div>
+  </section>
+</main>
+
+
+<footer class="site-footer">
+  <div class="footer-contact">
+    <strong>Contact</strong>
+    <a href="mailto:hello@originpropertyconcierge.com.au">hello@originpropertyconcierge.com.au</a>
+  </div>
+  <hr>
+  <p>Origin Property Concierge is a guidance and referral platform. We do not provide legal, financial, mortgage, tax or investment advice. Any professional services are provided by independent licensed professionals.</p>
+  <p>© 2026 Origin Property Concierge. All rights reserved.</p>
+</footer>
+<script src="assets/js/site.js"></script>
+
+
+</body>
+</html>

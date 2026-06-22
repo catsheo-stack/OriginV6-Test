@@ -1,0 +1,12 @@
+OriginV6 Production Fix
+
+Fixed:
+- When the user selects "Other", the text box now shows a clear Continue button directly underneath.
+- The typed Other answer is still captured in the final form submission.
+
+Changed files:
+- property-pathway.html
+- assets/js/wizard.js
+
+Deploy:
+Upload the contents of the OriginV6 folder to Netlify root.

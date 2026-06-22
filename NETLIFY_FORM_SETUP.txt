@@ -1,0 +1,28 @@
+OriginV6 Netlify Form Setup
+
+Replacement files included:
+- property-pathway.html
+- assets/js/wizard.js
+- index.html and all other site files are included for convenience.
+
+Where submissions go:
+1. Deploy this OriginV6 folder to Netlify.
+2. In Netlify Dashboard, open your site.
+3. Go to Forms.
+4. Look for the form named: origin-property-pathway.
+5. Submitted leads will appear there.
+
+To receive email notifications:
+1. In Netlify Dashboard, go to Forms.
+2. Open Form notifications.
+3. Add email notification.
+4. Send to: hello@originpropertyconcierge.com.au or your preferred email.
+
+Fields captured:
+- name
+- mobile
+- email
+- journey
+- support
+- otherSupportDetails
+- pathway JSON with the full questionnaire answers.
