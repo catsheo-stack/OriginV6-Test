@@ -1274,3 +1274,42 @@ html,body{font-size:15px;background:#fbfaf8}.brand img{width:138px;height:auto;o
     background: #ffffff !important;
   }
 }
+
+/* FINAL TRUE MOBILE BROWN FIX */
+@media (max-width: 900px) {
+  body.wizard-body,
+  body.wizard-body main,
+  main.wizard-shell {
+    background: #fffaf3 !important;
+    background-color: #fffaf3 !important;
+    background-image: none !important;
+  }
+
+  .wizard-card {
+    background: #ffffff !important;
+    color: #06172d !important;
+    border-color: rgba(6, 23, 45, 0.12) !important;
+    box-shadow: 0 18px 45px rgba(6, 23, 45, 0.12) !important;
+  }
+
+  .wizard-card h1,
+  .wizard-card h2,
+  .wizard-card h3,
+  .wizard-card p,
+  .wizard-card span,
+  .question-title,
+  .progress-meta {
+    color: #06172d !important;
+  }
+
+  .option-card,
+  .input-shell,
+  select,
+  input,
+  textarea {
+    background: #ffffff !important;
+    color: #06172d !important;
+    border-color: rgba(6, 23, 45, 0.15) !important;
+  }
+}
+/* FINAL TRUE MOBILE BROWN FIX END */
