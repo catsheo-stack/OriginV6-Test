@@ -1313,3 +1313,29 @@ html,body{font-size:15px;background:#fbfaf8}.brand img{width:138px;height:auto;o
   }
 }
 /* FINAL TRUE MOBILE BROWN FIX END */
+
+/* FINAL MOBILE WIZARD CARD LIGHT FIX */
+@media (max-width: 900px) {
+  body.wizard-body .wizard-card,
+  body.wizard-body .wizard-card *,
+  body.wizard-body .option-card {
+    background-color: #fffaf3 !important;
+  }
+
+  body.wizard-body .option-card {
+    background: #ffffff !important;
+  }
+
+  body.wizard-body .icon-box,
+  body.wizard-body .option-icon {
+    background: #f4eadc !important;
+  }
+
+  body.wizard-body .wizard-card,
+  body.wizard-body .question-title,
+  body.wizard-body .option-card,
+  body.wizard-body .option-card span {
+    color: #06172d !important;
+  }
+}
+/* FINAL MOBILE WIZARD CARD LIGHT FIX END */
